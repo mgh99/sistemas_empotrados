@@ -53,6 +53,66 @@ d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
                               d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o) (__data_init_standard)
 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
                               (__crt_start_mode_normal)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+                              build/default/production/main_p2.o (__sprintf_cdnopuxX)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo) (___ePrintf_cdnopuxX)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo) (_memcpy)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(strchr.XX_eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (_strchr)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XX_eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (__Puttxt)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XX_eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (__Vacopy)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(efwrite.XX_eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (_efwrite)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fflush.XX_elo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(efwrite.XX_eo) (__DNKfflush)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xfiles.XX_elo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fflush.XX_elo) (__Files)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo) (___Putfld_cdnopuxX)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xfwprep.XX_eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(efwrite.XX_eo) (__Fwprep)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo) (__Litob)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xfwprep.XX_eo) (__Closreg)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xatexit.XX_elo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo) (__Atexit)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(free.XX_eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo) (_free)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(malloc.XX_eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(free.XX_eo) (__Aldata)
+d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xgetmem.XX_eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(malloc.XX_eo) (__Getmem)
+d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(close.Leo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo) (_close)
+d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(write.Leo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fflush.XX_elo) (_write)
+d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(remove.Leo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo) (_remove)
+d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(sbrk.Leo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xgetmem.XX_eo) (_sbrk)
+d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(c30_uart.Leo)
+                              d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(write.Leo) (___C30_UART)
+d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(memcpy_eds.Leo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo) (__memcpy_eds_3)
+d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(memchr_eds.Leo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(efwrite.XX_eo) (__memchr_eds)
+d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(brk.Lelo)
+                              d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(sbrk.Leo) (_brk)
+d:/programas uni/bin/bin/../../lib\libm-elf.a(divsi3.eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___divsi3)
+d:/programas uni/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___udivsi3)
+d:/programas uni/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___umodsi3)
+d:/programas uni/bin/bin/../../lib\libm-elf.a(mulsi3.eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo) (___mulsi3)
+d:/programas uni/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                              d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo) (___udivdi3)
 
 
 Selected CodeGuard Options:
@@ -82,18 +142,24 @@ Default Scalar Model: Small
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x200                0xce           0x135  (309)
-.text                        0x2ce               0x1b6           0x291  (657)
+.text                        0x200              0x10ce          0x1935  (6453)
+.const                      0x12ce                 0xa             0xf  (15)
+.text                       0x12d8               0x200           0x300  (768)
+.dinit                      0x14d8                0xbc           0x11a  (282)
 
-                 Total "program" memory used (bytes):          0x3c6  (966) 2%
+                 Total "program" memory used (bytes):         0x1d5e  (7518) 22%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x800]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
+.data                        0x800                   0            0xc4  (196)
+.bss                         0x8c4                   0             0x6  (6)
+.data                        0x8ca                   0             0x4  (4)
+.bss                         0x8ce                   0             0x2  (2)
 
-                 Total "data" memory used (bytes):              0  (0) 
+                 Total "data" memory used (bytes):           0xd0  (208) 10%
 
 
 Dynamic Memory Usage
@@ -101,12 +167,34 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x800                               0x800  (2048)
+stack                        0x8d0                               0x730  (1840)
 
-                 Maximum dynamic memory (bytes):          0x800  (2048)
+                 Maximum dynamic memory (bytes):          0x730  (1840)
 
 Info: Project is using a large data memory model when small data memory model is sufficient.
 
+
+External Symbols in Data Memory (by address):
+
+                    0x0800                  __Stdin
+                    0x0828                  __Stdout
+                    0x0850                  __Stderr
+                    0x0878                  __Files
+                    0x08c4                  __Aldata
+                    0x08ca                  __Size_block
+                    0x08cc                  ___C30_UART
+                    0x08ce                  ___curbrk
+
+External Symbols in Data Memory (by name):
+
+                    0x08c4                  __Aldata
+                    0x0878                  __Files
+                    0x08ca                  __Size_block
+                    0x0850                  __Stderr
+                    0x0800                  __Stdin
+                    0x0828                  __Stdout
+                    0x08cc                  ___C30_UART
+                    0x08ce                  ___curbrk
 
 External Symbols in Program Memory (by address):
 
@@ -114,25 +202,101 @@ External Symbols in Program Memory (by address):
                   0x00023c                  __psv_init
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
-                  0x0002c8                  __DefaultInterrupt
-                  0x0002ce                  _delay_ms
-                  0x000308                  _uart_config
-                  0x00036c                  _main
+                  0x0002dc                  __DefaultInterrupt
+                  0x0003cc                  sprintf_cdnopuxX.XXeo:_eprout
+                  0x0003e6                  sprintf_cdnopuxX.XXeo:_prout
+                  0x0003f4                  __sprintf_cdnopuxX
+                  0x000414                  xprintf_cdnopuxX.XXeo:_eprout
+                  0x000432                  ___ePrintf_cdnopuxX
+                  0x0005a8                  ___Printf_cdnopuxX
+                  0x0005b2                  _memcpy
+                  0x0005c0                  _strchr
+                  0x0005d8                  __Puttxt
+                  0x00078c                  __Vacopy
+                  0x000790                  _efwrite
+                  0x000868                  __DNKfflush
+                  0x0008de                  ___Putfld_cdnopuxX
+                  0x000b02                  __Fwprep
+                  0x000b90                  __Litob
+                  0x000df2                  __Closreg
+                  0x000e04                  _fclose
+                  0x000e94                  fclose.XX_elo:_closeall
+                  0x000eb4                  __Atexit
+                  0x000ecc                  _free
+                  0x000f96                  _malloc
+                  0x000fea                  __Getmem
+                  0x00100a                  __memcpy_eds_3
+                  0x00100a                  __memcpy_eds
+                  0x001044                  __memchr_eds
+                  0x00107a                  ___divsi3
+                  0x001098                  ___udivsi3
+                  0x0010b8                  ___umodsi3
+                  0x0010be                  ___mulp32eds3
+                  0x0010be                  ___mulsi3
+                  0x0010be                  ___mulp32peds3
+                  0x001116                  ___udivmoddi3
+                  0x0011fc                  ___udivdi3
+                  0x00120a                  ___umoddi3
+                  0x001212                  ___divdi3
+                  0x001272                  ___moddi3
+                  0x0012d8                  _delay_ms
+                  0x001312                  _uart_config
+                  0x001376                  _imprime_cadena
+                  0x0013a2                  _parpadeo
+                  0x0013c2                  _main
                   0xf80000                  __FBS.sec
                   0xf80004                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x0002c8                  __DefaultInterrupt
+                  0x000eb4                  __Atexit
+                  0x000df2                  __Closreg
+                  0x000868                  __DNKfflush
+                  0x0002dc                  __DefaultInterrupt
                   0xf80000                  __FBS.sec
                   0xf80004                  __FGS.sec
+                  0x000b02                  __Fwprep
+                  0x000fea                  __Getmem
+                  0x000b90                  __Litob
+                  0x0005d8                  __Puttxt
+                  0x00078c                  __Vacopy
+                  0x0005a8                  ___Printf_cdnopuxX
+                  0x0008de                  ___Putfld_cdnopuxX
+                  0x001212                  ___divdi3
+                  0x00107a                  ___divsi3
+                  0x000432                  ___ePrintf_cdnopuxX
+                  0x001272                  ___moddi3
+                  0x0010be                  ___mulp32eds3
+                  0x0010be                  ___mulp32peds3
+                  0x0010be                  ___mulsi3
+                  0x0011fc                  ___udivdi3
+                  0x001116                  ___udivmoddi3
+                  0x001098                  ___udivsi3
+                  0x00120a                  ___umoddi3
+                  0x0010b8                  ___umodsi3
                   0x000252                  __data_init
                   0x000252                  __data_init_standard
+                  0x001044                  __memchr_eds
+                  0x00100a                  __memcpy_eds
+                  0x00100a                  __memcpy_eds_3
                   0x00023c                  __psv_init
                   0x000200                  __resetPRI
-                  0x0002ce                  _delay_ms
-                  0x00036c                  _main
-                  0x000308                  _uart_config
+                  0x0003f4                  __sprintf_cdnopuxX
+                  0x0012d8                  _delay_ms
+                  0x000790                  _efwrite
+                  0x000e04                  _fclose
+                  0x000ecc                  _free
+                  0x001376                  _imprime_cadena
+                  0x0013c2                  _main
+                  0x000f96                  _malloc
+                  0x0005b2                  _memcpy
+                  0x0013a2                  _parpadeo
+                  0x0005c0                  _strchr
+                  0x001312                  _uart_config
+                  0x000e94                  fclose.XX_elo:_closeall
+                  0x0003cc                  sprintf_cdnopuxX.XXeo:_eprout
+                  0x0003e6                  sprintf_cdnopuxX.XXeo:_prout
+                  0x000414                  xprintf_cdnopuxX.XXeo:_eprout
 
 Memory Configuration
 
@@ -188,7 +352,7 @@ LOAD d:/programas uni/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000200         0xce
+.text             0x000200       0x10ce
  *(.init)
  .init            0x000200         0x4c d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
                   0x000200                  __resetPRI
@@ -200,28 +364,132 @@ LOAD d:/programas uni/bin/bin/../../lib\libfx-elf.a
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr             0x0002c8          0x4 default_isr
-                  0x0002c8                  __DefaultInterrupt
+ .isr             0x0002dc          0x4 default_isr
+                  0x0002dc                  __DefaultInterrupt
  *(.libc)
+ .libc            0x0002e0         0x12 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(close.Leo)
+                  0x0002e0                  _close
+ .libc            0x0002f2         0x84 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(write.Leo)
+                  0x0002f2                  _write
+ .libc            0x000376         0x12 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(remove.Leo)
+                  0x000376                  _remove
+ .libc            0x000388         0x28 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(sbrk.Leo)
+                  0x000388                  _sbrk
+ .libc            0x0003b0         0x1a d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(brk.Lelo)
+                  0x0003b0                  _brk
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x0002cc          0x2 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
-                  0x0002cc                  __crt_start_mode
-                  0x0002cc                  __crt_start_mode_normal
+                  0x0003ca          0x2 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
+                  0x0003ca                  __crt_start_mode
+                  0x0003ca                  __crt_start_mode_normal
+ .libc.eprout     0x0003cc         0x1a d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+                  0x0003cc                  sprintf_cdnopuxX.XXeo:_eprout
+ .libc.prout      0x0003e6          0xe d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+                  0x0003e6                  sprintf_cdnopuxX.XXeo:_prout
+ .libc._sprintf_cdnopuxX
+                  0x0003f4         0x20 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+                  0x0003f4                  __sprintf_cdnopuxX
+ .libc.eprout     0x000414         0x1e d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+                  0x000414                  xprintf_cdnopuxX.XXeo:_eprout
+ .libc.__ePrintf_cdnopuxX
+                  0x000432        0x176 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+                  0x000432                  ___ePrintf_cdnopuxX
+ .libc.__Printf_cdnopuxX
+                  0x0005a8          0xa d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+                  0x0005a8                  ___Printf_cdnopuxX
+ .libc.memcpy     0x0005b2          0xe d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
+                  0x0005b2                  _memcpy
+ .libc.strchr     0x0005c0         0x18 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(strchr.XX_eo)
+                  0x0005c0                  _strchr
+ .libc._Puttxt    0x0005d8        0x1b4 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XX_eo)
+                  0x0005d8                  __Puttxt
+ .libc._Vacopy    0x00078c          0x4 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XX_eo)
+                  0x00078c                  __Vacopy
+ .libc.efwrite    0x000790         0xd8 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(efwrite.XX_eo)
+                  0x000790                  _efwrite
+ .libc._DNKfflush
+                  0x000868         0x76 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fflush.XX_elo)
+                  0x000868                  __DNKfflush
+ .libc.__Putfld_cdnopuxX
+                  0x0008de        0x224 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
+                  0x0008de                  ___Putfld_cdnopuxX
+ .libc._Fwprep    0x000b02         0x8e d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xfwprep.XX_eo)
+                  0x000b02                  __Fwprep
+ .libc._Litob     0x000b90        0x25e d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
+                  0x000b90                  __Litob
+ .libc.closeallreg
+                  0x000dee          0x4 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo)
+ .libc._Closreg
+                  0x000df2         0x12 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo)
+                  0x000df2                  __Closreg
+ .libc.fclose     0x000e04         0x90 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo)
+                  0x000e04                  _fclose
+ .libc.closeall
+                  0x000e94         0x20 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo)
+                  0x000e94                  fclose.XX_elo:_closeall
+ .libc._Atexit    0x000eb4         0x18 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xatexit.XX_elo)
+                  0x000eb4                  __Atexit
+ .libc.free       0x000ecc         0x64 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(free.XX_eo)
+                  0x000ecc                  _free
+ .libc.findmem    0x000f30         0x66 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(malloc.XX_eo)
+ .libc.malloc     0x000f96         0x54 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(malloc.XX_eo)
+                  0x000f96                  _malloc
+ .libc._Getmem    0x000fea         0x14 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xgetmem.XX_eo)
+                  0x000fea                  __Getmem
+ .libc.doclose    0x000ffe          0x4 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(close.Leo)
+ .libc.dowrite    0x001002          0x4 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(write.Leo)
+ .libc.doremove
+                  0x001006          0x4 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(remove.Leo)
+ .libc.memcpy_eds
+                  0x00100a         0x3a d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(memcpy_eds.Leo)
+                  0x00100a                  __memcpy_eds_3
+                  0x00100a                  __memcpy_eds
+ .libc._memchr_eds
+                  0x001044         0x36 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(memchr_eds.Leo)
+                  0x001044                  __memchr_eds
+ .libm.divsi3     0x00107a         0x1e d:/programas uni/bin/bin/../../lib\libm-elf.a(divsi3.eo)
+                  0x00107a                  ___divsi3
+ .libm.udivsi3    0x001098         0x20 d:/programas uni/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                  0x001098                  ___udivsi3
+ .libm.umodsi3    0x0010b8          0x6 d:/programas uni/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
+                  0x0010b8                  ___umodsi3
+ .libm.mulsi3     0x0010be          0xc d:/programas uni/bin/bin/../../lib\libm-elf.a(mulsi3.eo)
+                  0x0010be                  ___mulp32peds3
+                  0x0010be                  ___mulsi3
+                  0x0010be                  ___mulp32eds3
+ .libm.__PplusBdi
+                  0x0010ca         0x26 d:/programas uni/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+ .libm.__PminusBdi
+                  0x0010f0         0x26 d:/programas uni/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+ .libm.__udivmoddi3
+                  0x001116         0xe6 d:/programas uni/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x001116                  ___udivmoddi3
+ .libm.__udivdi3
+                  0x0011fc          0xe d:/programas uni/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x0011fc                  ___udivdi3
+ .libm.__umoddi3
+                  0x00120a          0x8 d:/programas uni/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x00120a                  ___umoddi3
+ .libm.__divdi3
+                  0x001212         0x60 d:/programas uni/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x001212                  ___divdi3
+ .libm.__moddi3
+                  0x001272         0x5c d:/programas uni/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+                  0x001272                  ___moddi3
 
 usercode
  *(usercode)
 
 __FBS             0xf80000          0x2
  *(__FBS.sec*)
- __FBS.sec        0xf80000          0x2 /CW/_FBS‘
+ __FBS.sec        0xf80000          0x2 /CW/_FBS`y
                   0xf80000                  __FBS.sec
 
 __FGS             0xf80004          0x2
  *(__FGS.sec*)
- __FGS.sec        0xf80004          0x2 /CW/_FGS€
+ __FGS.sec        0xf80004          0x2 /CW/_FGS ¸ÿ
                   0xf80004                  __FGS.sec
 
 __FOSCSEL
@@ -251,25 +519,26 @@ __FUID2
 __FUID3
  *(__FUID3.sec*)
 
-.comment
+.comment          0x000000         0x5e
  *(.comment)
+ .comment         0x000000         0x5e d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xfiles.XX_elo)
 
-.debug_info       0x000000       0x1456
+.debug_info       0x000000       0x14e4
  *(.debug_info)
- .debug_info      0x000000       0x1456 build/default/production/main_p2.o
+ .debug_info      0x000000       0x14e4 build/default/production/main_p2.o
  *(.gnu.linkonce.wi.*)
 
-.debug_abbrev     0x000000        0x110
+.debug_abbrev     0x000000        0x135
  *(.debug_abbrev)
- .debug_abbrev    0x000000        0x110 build/default/production/main_p2.o
+ .debug_abbrev    0x000000        0x135 build/default/production/main_p2.o
 
-.debug_line       0x000000        0x129
+.debug_line       0x000000        0x140
  *(.debug_line)
- .debug_line      0x000000        0x129 build/default/production/main_p2.o
+ .debug_line      0x000000        0x140 build/default/production/main_p2.o
 
-.debug_frame      0x000000         0x62
+.debug_frame      0x000000         0xa4
  *(.debug_frame)
- .debug_frame     0x000000         0x62 build/default/production/main_p2.o
+ .debug_frame     0x000000         0xa4 build/default/production/main_p2.o
 
 .debug_str        0x000000         0x84
  *(.debug_str)
@@ -282,10 +551,10 @@ __FUID3
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000         0x38
+                  0x000000         0x58
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000         0x38 build/default/production/main_p2.o
+                  0x000000         0x58 build/default/production/main_p2.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -955,9 +1224,11 @@ LOAD d:/programas uni/bin/bin/../../lib\libm-elf.a
 LOAD d:/programas uni/bin/bin/../../lib\liblega-c-elf.a
 END GROUP
 OUTPUT(dist/default/production/Practica2_SE.X.production.elf elf32-pic30)
-LOAD /CW/_FGS€
-LOAD /CW/_FBS‘
+LOAD /CW/_FGS ¸ÿ
+LOAD /CW/_FBS`y
+LOAD jump_table
 LOAD default_isr
+LOAD data_init
 
 .debug_pubtypes
                   0x000018        0x199
@@ -965,13 +1236,97 @@ LOAD default_isr
                   0x000018        0x199 build/default/production/main_p2.o
 
 __c30_signature
-                  0x0001b1         0x12
+                  0x0001b1         0xc6
  __c30_signature
                   0x0001b1          0x6 build/default/production/main_p2.o
  __c30_signature
                   0x0001b7          0x6 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
  __c30_signature
                   0x0001bd          0x6 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+ __c30_signature
+                  0x0001c3          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(sprintf_cdnopuxX.XXeo)
+ __c30_signature
+                  0x0001c9          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+ __c30_signature
+                  0x0001cf          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(memcpy.XX_eo)
+ __c30_signature
+                  0x0001d5          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(strchr.XX_eo)
+ __c30_signature
+                  0x0001db          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xputtxt.XX_eo)
+ __c30_signature
+                  0x0001e1          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xvacopy.XX_eo)
+ __c30_signature
+                  0x0001e7          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(efwrite.XX_eo)
+ __c30_signature
+                  0x0001ed          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fflush.XX_elo)
+ __c30_signature
+                  0x0001f3          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xfiles.XX_elo)
+ __c30_signature
+                  0x0001f9          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xputfld_cdnopuxX.XXeo)
+ __c30_signature
+                  0x0001ff          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xfwprep.XX_eo)
+ __c30_signature
+                  0x000205          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
+ __c30_signature
+                  0x00020b          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo)
+ __c30_signature
+                  0x000211          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xatexit.XX_elo)
+ __c30_signature
+                  0x000217          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(free.XX_eo)
+ __c30_signature
+                  0x00021d          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(malloc.XX_eo)
+ __c30_signature
+                  0x000223          0x6 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xgetmem.XX_eo)
+ __c30_signature
+                  0x000229          0x6 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(close.Leo)
+ __c30_signature
+                  0x00022f          0x6 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(write.Leo)
+ __c30_signature
+                  0x000235          0x6 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(remove.Leo)
+ __c30_signature
+                  0x00023b          0x6 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(sbrk.Leo)
+ __c30_signature
+                  0x000241          0x6 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(c30_uart.Leo)
+ __c30_signature
+                  0x000247          0x6 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(memcpy_eds.Leo)
+ __c30_signature
+                  0x00024d          0x6 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(memchr_eds.Leo)
+ __c30_signature
+                  0x000253          0x6 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(brk.Lelo)
+ __c30_signature
+                  0x000259          0x6 d:/programas uni/bin/bin/../../lib\libm-elf.a(divsi3.eo)
+ __c30_signature
+                  0x00025f          0x6 d:/programas uni/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+ __c30_signature
+                  0x000265          0x6 d:/programas uni/bin/bin/../../lib\libm-elf.a(umodsi3.eo)
+ __c30_signature
+                  0x00026b          0x6 d:/programas uni/bin/bin/../../lib\libm-elf.a(mulsi3.eo)
+ __c30_signature
+                  0x000271          0x6 d:/programas uni/bin/bin/../../lib\libm-elf.a(divmoddi3.eo)
+
+.data               0x0800         0xc4
+ .data              0x0800         0x88 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xfiles.XX_elo)
+                    0x0800                  __Stdin
+                    0x0828                  __Stdout
+                    0x0850                  __Stderr
+                    0x0878                  __Files
+ .data              0x0888         0x22 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xlitob.XX_eo)
+ .data              0x08aa         0x1a d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(xprintf_cdnopuxX.XXeo)
+
+.bss                0x08c4          0x6
+ .bss               0x08c4          0x4 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(malloc.XX_eo)
+                    0x08c4                  __Aldata
+ .bss               0x08c8          0x2 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(fclose.XX_elo)
+
+.data               0x08ca          0x4
+ .data              0x08ca          0x2 d:/programas uni/bin/bin/../../lib\liblega-c-elf.a(malloc.XX_eo)
+                    0x08ca                  __Size_block
+ .data              0x08cc          0x2 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(c30_uart.Leo)
+                    0x08cc                  ___C30_UART
+
+.bss                0x08ce          0x2
+ .bss               0x08ce          0x2 d:/programas uni/bin/bin/../../lib\liblega-pic30-elf.a(brk.Lelo)
+                    0x08ce                  ___curbrk
 
 .config_JTAGEN    0xf8000e          0x2
  .config_JTAGEN
@@ -991,8 +1346,16 @@ __c30_signature
 .config_IESO      0xf80006          0x2
  .config_IESO     0xf80006          0x2 build/default/production/main_p2.o
 
-.text             0x0002ce        0x1b6
- .text            0x0002ce        0x1b6 build/default/production/main_p2.o
-                  0x0002ce                  _delay_ms
-                  0x000308                  _uart_config
-                  0x00036c                  _main
+.const              0x92ce          0xa load address 0x0012ce  
+ .const             0x92ce          0xa build/default/production/main_p2.o
+
+.text             0x0012d8        0x200
+ .text            0x0012d8        0x200 build/default/production/main_p2.o
+                  0x0012d8                  _delay_ms
+                  0x001312                  _uart_config
+                  0x001376                  _imprime_cadena
+                  0x0013a2                  _parpadeo
+                  0x0013c2                  _main
+
+.dinit            0x0014d8         0xbc
+ .dinit           0x0014d8         0xbc data_init

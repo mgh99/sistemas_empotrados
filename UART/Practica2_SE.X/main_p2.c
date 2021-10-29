@@ -1,7 +1,6 @@
 /*
- * File:   main_p2.c
- * Author: María González
- *         Santiago Molpeceres
+ * File:   main_principal.c
+ * Author: María González Herrero & Santiago Molpeceres Díaz
  *
  * Created on 24 de octubre de 2021, 17:42
  */
@@ -57,11 +56,11 @@
 
 #define baud_9600 1041 // Es este valor porque sale de la fórmula de UxBRG 40 * 106 / 4 * 1960
 #define LED_RED  LATBbits.LATB3 //D1  RB3
-#define LED_GREEN LATAbits.LATA0 //D2 RA0
+#define LED_GREEN LATAbits.LATA0
 
 void delay_ms(unsigned long time_ms) {
     unsigned long u;
-    for (u = 0; u < time_ms * 900; u++) // Calculo aproximado para una CPU a 4MHz
+    for (u = 0; u < time_ms * 650; u++) // Calculo aproximado para una CPU a 40MHz generará un delay de 0.5s a 500ml ME:+-5
     {
         asm("NOP");
     }
@@ -69,10 +68,9 @@ void delay_ms(unsigned long time_ms) {
 
 void uart_config(unsigned int baud) {
     //Asignar módulo UART a un puerto/pines de comunicacion
-    
-    TRISCbits.TRISC0 = 1;                // Pin RCO como puerto de entrada (digital)
-    RPINR18bits.U1RXR = 16;               // pin RC0 al puerto de recepcion uart 1   RP16
-    RPOR8bits.RP17R = 3;                 // Pin RC1 conectado al pin de transmision de la uart1
+    TRISCbits.TRISC0 = 1; // Pin RCO como puerto de entrada (digital)
+    RPINR18bits.U1RXR = 16; // pin RC0 al puerto de recepcion uart 1   RP16
+    RPOR8bits.RP17R = 3; // Pin RC1 conectado al pin de transmision de la uart1
 
     //Configuración registro U1MODE
     U1MODEbits.UARTEN = 0; // Al inicio está deshabilitada la UART
@@ -121,7 +119,7 @@ void parpadeo() {
 }
 
 int main(void) {
-
+    // configurada a trabajar con 40Mhz
     //Fosc = Fon * (M1/(N1*N2))
     //fOSC = 8Mhz * (40/(2*2))
 
@@ -132,13 +130,15 @@ int main(void) {
 
     AD1PCFGL = 0XFFFF; // Todos los pines configurados en digital
 
-    TRISBbits.TRISB3 = 0;               // Configuramos el pin RB3 del puerto B como salida (D1)
-    TRISAbits.TRISA0 = 0;               // Configuramos el pin RA0 del puerto A como salida (D2) 
-    delay_ms(10);                       // Hacemos una pequeña espera para asegurar que se ha hecho la configuración antes de continuar
+    TRISBbits.TRISB3 = 0; // Configuramos el pin RB3 del puerto B como salida (D1)
+    TRISAbits.TRISA0 = 0; // Configuramos el pin RA0 del puerto A como salida (D2)
+    TRISAbits.TRISA1 = 0; // configuramos el pin RA1 del puerto A como salida (D3)
+    delay_ms(10); // Hacemos una pequeña espera para asegurar que se ha hecho la configuración antes de continuar
 
-    LATBbits.LATB3 = 0;                 // Estado 'low', por defecto, en el pin RB3 (D1)
-    LATAbits.LATA0 = 0;                  // Estado 'low', por defecto, en el pin RA0 (D2) 
-    delay_ms(10);                       // Hacemos una pequeña espera para asegurar que se ha hecho la configuración antes de continuar
+    LATBbits.LATB3 = 0; // Estado 'low', por defecto, en el pin RB3 (D1)
+    LATAbits.LATA0 = 0; // Estado 'low', por defecto, en el pin RA0 (D2)
+    LATAbits.LATA1 = 0; // estado 'low' por defecto, en el pin de RA1 (D3)
+    delay_ms(10); // Hacemos una pequeña espera para asegurar que se ha hecho la configuración antes de continuar
     uart_config(baud_9600);
 
     // Variables necesarias
@@ -150,37 +150,38 @@ int main(void) {
     imprime_cadena(nombre);
 
     while (1) {
-        
-        //EJERCICIO 1
-        char str[100];                          // no es muy optimo, llegará un punto que deje de contar por que no entra el numero
+        // Ejercicio 1
+        char str[100]; // no es muy optimo, llegará un punto que deje de contar por que no entra el numero
         sprintf(str, "%d", contador);
         imprime_cadena(str);
         contador++;
-        delay_ms(500);                            // genera aproximadamente un delay de 0.5 sengundos 
+        
+        if (h_pulsada) {
+            //he pulsado
+            parpadeo();
+            delay_ms(250);
+        } else {
+            delay_ms(500); // genera aproximadamente un delay de 0.5 sengundos s   
+        }
 
         /* mira si ha habido un error*/
         if (U1STAbits.FERR == 1) {
             continue;
         }
-        
         /* soluciona el overrrun */
         if (U1STAbits.OERR == 1) {
             U1STAbits.OERR = 0;
             continue;
         }
-                                                                                                 /* Get the data */
-        
+        /* obtiene el dato */
         if (U1STAbits.URXDA) {
             ReceivedChar = (char) U1RXREG;
-            //EJERCICIO 2
             if (ReceivedChar == 'e' || ReceivedChar == 'E') {
                 LATBbits.LATB3 = 1;
             } else if (ReceivedChar == 'a' || ReceivedChar == 'A') {
                 LATBbits.LATB3 = 0;
-            //EJERCICIO 4
             } else if (ReceivedChar == ' ') {
                 contador = 0;
-            //EJERCICIO 3
             } else if (ReceivedChar == 'h' || ReceivedChar == 'H') {
                 h_pulsada = !h_pulsada;
                 if (h_pulsada == 0) {
@@ -190,8 +191,8 @@ int main(void) {
         }
         if (h_pulsada) {
             parpadeo();
+            delay_ms(250);
         }
-        delay_ms(250);
     }
     return 0;
 }
