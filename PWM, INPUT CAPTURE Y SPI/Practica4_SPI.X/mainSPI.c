@@ -60,6 +60,7 @@
 
 char txbuffer[200];
 unsigned char dataCMD_ISR; 
+char eepromfiter [10];
 
 unsigned int dutyOC1 = 1999; 
 unsigned int dutyOC2 = 3999; 
@@ -92,37 +93,37 @@ void delay_ms(unsigned long time_ms)
 
 void uart_config (unsigned int baud) //esta no la he usado en IC1 IC2
 {
-     // Configuraci髇 de pines tx y rx
+     // Configuraci贸n de pines tx y rx
     TRISCbits.TRISC0  = 1;   // Pin de recepcion de uart establecido como entrada.
     RPINR18bits.U1RXR = 16;  // pin de recepcion rc0 trabajando con el modulo uart (RP16)
     RPOR8bits.RP17R   = 3;   // U1TX conectado con el pin RC1 (RP17)
     
-    // Configuraci髇 de registro de U1MODE
+    // Configuraci贸n de registro de U1MODE
     U1MODEbits.UARTEN = 0;     // Deshabilitar Uart.
-    U1MODEbits.USIDL  = 0;     // Continuar operaci髇 en modo IDLE
+    U1MODEbits.USIDL  = 0;     // Continuar operaci贸n en modo IDLE
     U1MODEbits.IREN   = 0;     // IR no usado
     U1MODEbits.RTSMD  = 1;     // Control de flujo desactivado.
     U1MODEbits.UEN    = 0;     // Solo usamos pin de Tx y pin de Rx
     U1MODEbits.WAKE   = 0;     // No quiero que la UART despierte del modo sleep
     U1MODEbits.LPBACK = 0;     // Loopback deshabilitado.
-    U1MODEbits.ABAUD  = 0;     // Automedici髇 de baudios (bps) deshabilidada
+    U1MODEbits.ABAUD  = 0;     // Automedici贸n de baudios (bps) deshabilidada
     U1MODEbits.URXINV = 0;     // En estado de reposo, el receptor mantiene un estado alto, high
     U1MODEbits.BRGH   = 1;     // Modo High-Speed
     U1MODEbits.PDSEL  = 0;     // 8 Bits de datos y paridad Nula (8N)
     U1MODEbits.STSEL  = 0;     // 1-bit de stop al final de la trama de datos.   (8N1)
 
-    // Configuraci髇 de registro de U1STA
+    // Configuraci贸n de registro de U1STA
     U1STAbits.UTXISEL0 = 0;    // Tema interrupciones 
     U1STAbits.UTXISEL1 = 0;    // Tema interrupciones 
      
-    U1STAbits.UTXINV   = 0;    // El estado en reposo del pin de transmisi髇 es High
-    U1STAbits.UTXBRK   = 0;    // No usamos trama de sincronizaci髇
+    U1STAbits.UTXINV   = 0;    // El estado en reposo del pin de transmisi贸n es High
+    U1STAbits.UTXBRK   = 0;    // No usamos trama de sincronizaci贸n
     U1STAbits.UTXEN    = 1;    // El transmisor a pleno funcionamiento.
     U1STAbits.URXISEL  = 0;    // Tema interrupciones (no mirar aun)
     U1STAbits.ADDEN    = 0;    // No usamos direccionamiento.
-    U1STAbits.OERR     = 0;    // Reseteamos buffer de recepci髇
+    U1STAbits.OERR     = 0;    // Reseteamos buffer de recepci贸n
 
-    // Configuramos la velocidad de transmisi髇/recepcci髇 de los datos
+    // Configuramos la velocidad de transmisi贸n/recepcci贸n de los datos
     U1BRG = baud;
       
     // Prioridades, flags e interrupciones correspondientes a la Uart
@@ -153,7 +154,7 @@ void EnviarString(char *s)
 void spi_config(void)
 {
     
-    //Configuraci髇 de pines SPI
+    //Configuraci贸n de pines SPI
     TRISCbits.TRISC0 = 1; //MISO asignado a RC0 (PIN 25), funciona como un pin de entrada por eso esta a 1
     //el resto de pines como son generados como master son salidas
     TRISCbits.TRISC1 = 0; //MOSI asignado a RC1 (PIN 26)
@@ -167,14 +168,14 @@ void spi_config(void)
     RPOR8bits.RP17R = 7; //(00111);    RC1 es MOSI (salida)
     RPOR9bits.RP18R = 8; //(01000);    RC2 es SCK (salida)
     
-    //Configuraci髇 SPISTAT
+    //Configuraci贸n SPISTAT
     SPI1STATbits.SPIEN = 0;
     SPI1STATbits.SPISIDL = 0;
     SPI1STATbits.SPIROV = 0;
     SPI1STATbits.SPITBF = 0;
     SPI1STATbits.SPIRBF = 0;
     
-    //Configuraci髇 SPICON1
+    //Configuraci贸n SPICON1
     SPI1CON1bits.DISSCK = 0;
     SPI1CON1bits.DISSDO = 0;
     SPI1CON1bits.MODE16 = 0; //el spi puede hacer transferencias en una sola tanda de 16 bits y sino la establecemos se hacen transferencias de 8 bits
@@ -189,7 +190,7 @@ void spi_config(void)
     SPI1CON1bits.PPRE = 1; //1:1
     SPI1CON1bits.SPRE = 6; //2:1  //Fspi = Fcpu/2 = 1MHz/1Mbps
     
-    //Configuraci髇 SPICON2 Framed Mode Disabled
+    //Configuraci贸n SPICON2 Framed Mode Disabled
     SPI1CON2bits.FRMEN = 0;
     SPI1CON2bits.SPIFSD = 0;
     SPI1CON2bits.FRMPOL = 0;
@@ -212,11 +213,22 @@ void spi_config(void)
 unsigned char spi_write (unsigned char data) 
 {
     //si no esta libre nos quedamos en el bucle while
-    while(SPI1STATbits.SPITBF); //Esperamos a que el buffer de transmision este vac韔
+    while(SPI1STATbits.SPITBF); //Esperamos a que el buffer de transmision este vac铆o
     SPI1BUF = data; //Cargamos un dato al buffer
     while(!SPI1STATbits.SPIRBF); //Esperamos a recibir el sitio de vuelta. Basicamente esperamos a que el SPI muestre durante 8 ciclos de retorno
     
     return SPI1BUF;
+}
+
+void vectorEeprom(void) 
+{
+    int i;
+     for(i = 0; i < eepromfiter; i++ ) {
+        //direcciones de la 0 - 10 
+        //valores de la 0 - 10
+        
+        
+    }
 }
 
 int main(void) {
@@ -235,11 +247,11 @@ int main(void) {
     /*Pines analogos o digitales*/
     AD1PCFGL = 0xFFFF; //Todos los puertos son digitales
     
-    /*Configuraci髇 de pines auxiliares*/
-    TRISBbits.TRISB0 = 0; //Pin RB0 como salida (LED 1)
-    TRISBbits.TRISB1 = 0; //Pin RB1 como salida (LED 2)
-    LATBbits.LATB0 = 0; //Pin RB0 a nivel bajo por defecto (LED1 APAGADO)
-    LATBbits.LATB1 = 0; //Pin RB1 a nivel bajo por defecto (LED2 APAGADO)
+    /*Configuraci贸n de pines auxiliares*/
+    TRISAbits.TRISA0 = 0; //Pin RB0 como salida (LED 1)
+    TRISAbits.TRISA1 = 0; //Pin RB1 como salida (LED 2)
+    LATAbits.LATA0 = 0; //Pin RB0 a nivel bajo por defecto (LED1 APAGADO) -> rojo
+    LATAbits.LATA1 = 0; //Pin RB1 a nivel bajo por defecto (LED2 APAGADO) -> verde
     
     uart_config(baud_9600); //Configurar el modulo UART
     delay_ms(10);
@@ -251,7 +263,10 @@ int main(void) {
     INTCON1bits.NSTDIS = 0; //Interrupt nesting enable
     SRbits.IPL = 0; //enable global interrupts
     
-     while(1)
+    vectorEeprom();
+    delay_ms(1000);
+    
+    while(1)
     {
         
         //secuencia de habilitacion (write enable) 
@@ -284,6 +299,7 @@ int main(void) {
         
         sprintf(txbuffer, "Escritura completada (valor 5 en direccion 0x0001) \r\n");
         EnviarString(txbuffer);
+        LATAbits.LATA1 = 1;
         
         delay_ms(5000);
         
@@ -307,6 +323,7 @@ int main(void) {
         delay_ms(1000);
         sprintf(txbuffer, "Dato en memoria %02X, Adress = 0x0001 \r\n", dataCMD_ISR);
         EnviarString(txbuffer);
+        LATAbits.LATA1 = 1;
     }
     
     EnviarString(txbuffer);
