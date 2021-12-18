@@ -95,37 +95,37 @@ void delay_ms(unsigned long time_ms)
 
 void uart_config (unsigned int baud) //esta no la he usado en IC1 IC2
 {
-     // Configuraci髇 de pines tx y rx
+     // Configuraci贸n de pines tx y rx
     TRISCbits.TRISC0  = 1;   // Pin de recepcion de uart establecido como entrada.
     RPINR18bits.U1RXR = 16;  // pin de recepcion rc0 trabajando con el modulo uart (RP16)
     RPOR8bits.RP17R   = 3;   // U1TX conectado con el pin RC1 (RP17)
     
-    // Configuraci髇 de registro de U1MODE
+    // Configuraci贸n de registro de U1MODE
     U1MODEbits.UARTEN = 0;     // Deshabilitar Uart.
-    U1MODEbits.USIDL  = 0;     // Continuar operaci髇 en modo IDLE
+    U1MODEbits.USIDL  = 0;     // Continuar operaci贸n en modo IDLE
     U1MODEbits.IREN   = 0;     // IR no usado
     U1MODEbits.RTSMD  = 1;     // Control de flujo desactivado.
     U1MODEbits.UEN    = 0;     // Solo usamos pin de Tx y pin de Rx
     U1MODEbits.WAKE   = 0;     // No quiero que la UART despierte del modo sleep
     U1MODEbits.LPBACK = 0;     // Loopback deshabilitado.
-    U1MODEbits.ABAUD  = 0;     // Automedici髇 de baudios (bps) deshabilidada
+    U1MODEbits.ABAUD  = 0;     // Automedici贸n de baudios (bps) deshabilidada
     U1MODEbits.URXINV = 0;     // En estado de reposo, el receptor mantiene un estado alto, high
     U1MODEbits.BRGH   = 1;     // Modo High-Speed
     U1MODEbits.PDSEL  = 0;     // 8 Bits de datos y paridad Nula (8N)
     U1MODEbits.STSEL  = 0;     // 1-bit de stop al final de la trama de datos.   (8N1)
 
-    // Configuraci髇 de registro de U1STA
+    // Configuraci贸n de registro de U1STA
     U1STAbits.UTXISEL0 = 0;    // Tema interrupciones 
     U1STAbits.UTXISEL1 = 0;    // Tema interrupciones 
      
-    U1STAbits.UTXINV   = 0;    // El estado en reposo del pin de transmisi髇 es High
-    U1STAbits.UTXBRK   = 0;    // No usamos trama de sincronizaci髇
+    U1STAbits.UTXINV   = 0;    // El estado en reposo del pin de transmisi贸n es High
+    U1STAbits.UTXBRK   = 0;    // No usamos trama de sincronizaci贸n
     U1STAbits.UTXEN    = 1;    // El transmisor a pleno funcionamiento.
     U1STAbits.URXISEL  = 0;    // Tema interrupciones (no mirar aun)
     U1STAbits.ADDEN    = 0;    // No usamos direccionamiento.
-    U1STAbits.OERR     = 0;    // Reseteamos buffer de recepci髇
+    U1STAbits.OERR     = 0;    // Reseteamos buffer de recepci贸n
 
-    // Configuramos la velocidad de transmisi髇/recepcci髇 de los datos
+    // Configuramos la velocidad de transmisi贸n/recepcci贸n de los datos
     U1BRG = baud;
       
     // Prioridades, flags e interrupciones correspondientes a la Uart
@@ -159,7 +159,7 @@ void output_compare_config(void)
     OC2R = 2799; //1 miliseg //esto es solo de lectura tecnicamente incluso se podria eliminar
     OC2RS = 2799; //1 miliseg (duty clycle 70%)
     
-    /*Configuraci髇 Timer 2*/
+    /*Configuraci贸n Timer 2*/
     T2CONbits.TON = 0; //Deshabilitamos el Timer 2
     T2CONbits.TCS = 0; //Seleccionamos el clock interno
     T2CONbits.TGATE = 0; //Gated timer mode deshabilitado
@@ -204,7 +204,7 @@ void input_capture_config(void)
     IC2CONbits.ICM    = 0;
     IC2CONbits.ICSIDL = 0;  // el IC se detiene si la CPU entra en modo reposo
     IC2CONbits.ICTMR  = 0;  // Trabajamos con Timer 3
-    IC2CONbits.ICI    = 0;  // salta en cada evento, es igual que el ICI del IC1 (001) seg鷑 la documentacion
+    IC2CONbits.ICI    = 0;  // salta en cada evento, es igual que el ICI del IC1 (001) seg煤n la documentacion
     
     //Configurar registros de interrupcion para IC2
     IPC1bits.IC2IP = 5; //Setup IC2 interrupt priority level
@@ -259,7 +259,7 @@ int main(void) //todavia no he unido ambas
     /*Pines analogos o digitales*/
     AD1PCFGL = 0xFFFF; //Todos los puertos son digitales
     
-    /*Configuraci髇 de pines auxiliares*/
+    /*Configuraci贸n de pines auxiliares*/
     TRISBbits.TRISB0 = 0; //Pin RB0 como salida (LED 1)
     TRISBbits.TRISB1 = 0; //Pin RB1 como salida (LED 2)
     LATBbits.LATB0 = 0; //Pin RB0 a nivel bajo por defecto (LED1 APAGADO)
@@ -277,29 +277,17 @@ int main(void) //todavia no he unido ambas
     /*Habilitar Interrupciones globales*/
     INTCON1bits.NSTDIS = 0; //Interrupt nesting enable
     SRbits.IPL = 0; //enable global interrupts
-    
-    sprintf(txbuffer, "\r\n SIMULACION SISTEMAS EMPOTRADOS PRACTICA 4 \r\n");
-    EnviarString(txbuffer);
-    sprintf(txbuffer, " -------------------------- \r\n\r\n");
-    EnviarString(txbuffer);
-    delay_ms(100);
-    
-    //Leds
-    TRISBbits.TRISB0 = 0; //SALIDA
-    TRISBbits.TRISB1 = 0; //SALIDA
-    //LED_RED = 0;
-    //LED_GREEN = 0;
             
     while(1)
     {
-        if(U1STAbits.OERR) U1STAbits.OERR = 0; //Si hay overflow en el buffer de recpci髇, reseteamos la UART
+        if(U1STAbits.OERR) U1STAbits.OERR = 0; //Si hay overflow en el buffer de recpci贸n, reseteamos la UART
     
         if(flag)
         {
             tiempo_real_IC1 = 1.0*((double)time_pulsoIC1)/4000.0;
             tiempo_real_IC2 = 1.0*((double)time_pulsoIC2)/4000.0;
     
-            sprintf(txbuffer, "Time_IC1: %05.3fms  Time_IC2: %1ms \r\n", tiempo_real_IC1, tiempo_real_IC2);
+            sprintf(txbuffer, "Time_IC1: %1ms  Time_IC2: %1ms \r\n", tiempo_real_IC1, tiempo_real_IC2);
             EnviarString(txbuffer);
             
             //esto se hace para evitar saturar el simulador
@@ -319,7 +307,7 @@ int main(void) //todavia no he unido ambas
 //evaluar el ciclo de trabajo
 void __attribute__((__interrupt__, no_auto_psv)) _IC1Interrupt(void) //este es nombre especifico y no se puede cambiar
 { 
-    /*Si el pulso esta a 0 voy a volcar el dato que tenga de temporizaci髇 el 'IC1BUF' y lo asignos
+    /*Si el pulso esta a 0 voy a volcar el dato que tenga de temporizaci贸n el 'IC1BUF' y lo asignos
      * a una varibale.
      * Una vez asignada la marca de tiempos en la que estoy, lo que hago es cambiar opara que la interrupcion
      * salte con el flanco de bajada (recordando que partimos de un flanco de subida)
@@ -359,4 +347,11 @@ void __attribute__((__interrupt__, no_auto_psv)) _IC2Interrupt(void)
         
     IFS0bits.IC2IF = 0;          // Reset IC2 Interrupt
 }
+
+void __attribute__((__interrupt__, no_auto_psv)) _T1Interrupt(void)
+{    
+    IFS0bits.T1IF = 0;          // Reset Timer1 Interrupt
+}
+
+
 
